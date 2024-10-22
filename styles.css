@@ -6,8 +6,28 @@
     box-sizing: border-box;
 }
 
-body {
-    scrollbar-width: none;
+input {
+    font: inherit;
+    border: none;
+}
+
+button {
+    border: none;
+    background-color: initial;
+    outline: none;
+}
+
+input:focus, input:hover {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* ---------- GLOBAL STYLES ---------- */
@@ -22,7 +42,6 @@ body {
     align-items: center;
     justify-content: center;
     scrollbar-width: none;
-    /* -ms-overflow-style: -ms-autohiding-scrollbar; */
 }
 
 .page::-webkit-scrollbar {
@@ -41,12 +60,89 @@ body {
     grid-template-rows: 65px 724px 1fr;
 }
 
-/* ----------- STYLES ----------- */
+/* ----------- HEADER STYLES ----------- */
 
 .header {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+
+    display: flex;
+    align-items: center;
 }
+
+.logo {
+    height: 45px;
+    margin-left: 26px;
+    margin-right: 48px;
+}
+
+.search {
+    position: relative;
+}
+
+.search__input {
+    background-color: #eef3f4;
+    height: 34px;
+    width: 405px;
+    border-radius: 500px;
+    font-size: 13px;
+    color: #555a5b;
+    padding-left: 20px;
+    transition: all 0.2s;
+}
+
+.search__input:focus {
+    width: 425px;
+}
+
+.search__input::placeholder {
+    color: #a9b4b7
+}
+
+.search__submit {
+    font-size: 15px;
+    height: 20px;
+    color: #a9b4b7;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 10px);
+}
+
+.search__submit:focus {
+    color: #555a5b;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav__list {
+    display: flex;
+
+}
+
+.nav__link {
+    display: block;
+    height: 65px;
+    padding: 0 20px;
+    transition: all 1s;
+}
+
+.nav__icon {
+    line-height: 65px;
+}
+
+.nav__link:hover, .nav__link:focus {
+    background-color: #eef3f4;
+}
+
+.nav__icon {
+    font-size: 22px;
+    color: #a9b4b7;
+}
+/* ----------- SIDEBAR STYLES ----------- */
 
 .sidebar {
     grid-column: 1 / 2;
@@ -54,11 +150,15 @@ body {
     background-color: #11271f;
 }
 
+/* ----------- GALLERY STYLES ----------- */
+
 .gallery {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     background-color: #eef3f4;
 }
+
+/* ----------- STEPS STYLES ----------- */
 
 .steps {
     grid-column: 2 /3;
