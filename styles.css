@@ -1,4 +1,3 @@
-/* ---------- RESET STYLES ---------- */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -29,7 +28,26 @@ a {
   text-decoration: none;
 }
 
-/* ---------- GLOBAL STYLES ---------- */
+.u-italic {
+  font-style: italic;
+}
+
+.u-accent {
+  color: #2cc695;
+}
+
+.u-underline {
+  text-decoration: underline;
+}
+
+.u-bold {
+  font-weight: 500;
+}
+
+.u-bolder {
+  font-weight: 700;
+}
+
 .page {
   font: 14px "Poppins", sans-serif;
   color: #fff;
@@ -54,7 +72,6 @@ a {
   grid-template-rows: 65px 724px 1fr;
 }
 
-/* ----------- HEADER STYLES ----------- */
 .header {
   grid-column: 1/3;
   grid-row: 1/2;
@@ -122,21 +139,85 @@ a {
   color: #a9b4b7;
 }
 
-/* ----------- SIDEBAR STYLES ----------- */
 .sidebar {
   grid-column: 1/2;
   grid-row: 2/4;
   background-color: #11271f;
 }
+.sidebar .intro {
+  padding: 48px 35px 45px;
+  border-bottom: solid rgba(255, 255, 255, 0.1);
+}
+.sidebar .intro .first-heading {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 34px;
+  line-height: 1;
+}
+.sidebar .intro__text {
+  color: #eef3f4;
+  font-size: 16px;
+  margin-top: 12px;
+  line-height: 1.8;
+}
+.sidebar .intro .social {
+  display: flex;
+  margin: 25px 0 30px;
+  justify-content: center;
+}
+.sidebar .intro .social__img {
+  height: 35px;
+  width: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px #fff solid;
+}
+.sidebar .intro .social__img:not(:first-child) {
+  margin-left: -8px;
+}
+.sidebar .intro .social__container {
+  margin-left: 10px;
+}
+.sidebar .intro .social__number {
+  font-weight: 500;
+}
+.sidebar .intro .social__text {
+  font-size: 12px;
+  color: #a9b4b7;
+  margin-top: -5px;
+}
+.sidebar .intro .btn {
+  background-color: #16b47f;
+  padding: 12px 0;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.sidebar .intro .btn:hover, .sidebar .intro .btn:focus {
+  background-color: #119267;
+}
+.sidebar .intro .btn__icon {
+  margin-left: 2px;
+}
+.sidebar .intro .auth__text {
+  color: #a9b4b7;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 8px;
+}
+.sidebar .intro .auth__link {
+  font-weight: 500;
+  color: #2cc695;
+}
 
-/* ----------- GALLERY STYLES ----------- */
 .gallery {
   grid-column: 2/3;
   grid-row: 2/3;
   background-color: #eef3f4;
 }
 
-/* ----------- STEPS STYLES ----------- */
 .steps {
   grid-column: 2/3;
   grid-row: 3/4;
