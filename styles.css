@@ -252,7 +252,17 @@ a {
   font-size: 12px;
   margin-top: -2px;
 }
-
+.sidebar .footer {
+  padding-top: 35px;
+  padding-left: 35px;
+  font-size: 11px;
+  color: rgba(169, 180, 183, 0.6);
+}
+.sidebar .footer__list {
+  display: flex;
+  column-gap: 15px;
+  margin-top: 10px;
+}
 .gallery {
   grid-column: 2/3;
   grid-row: 2/3;

@@ -312,6 +312,22 @@ a {
             margin-top: -2px;
         }
     }
+
+    .footer {
+        padding-top: 35px;
+        padding-left: 35px;
+        font-size: 11px;
+        color: rgba($color-grey-medium, .6);
+    
+        &__list {
+            display: flex;
+            column-gap: 15px;
+            margin-top: 10px;
+        }
+
+        &__item {}
+        &__link {}
+    }
 }
 
 // ----------- GALLERY STYLES
