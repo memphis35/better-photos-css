@@ -4,11 +4,18 @@
   "description": "a CSS-oriented project to practice and sharpen CSS-related skills   from _ByteGrad.com_ course [available here](https://bytegrad.com/courses/professional-css)",
   "main": "index.js",
   "scripts": {
-    "compile": "sass --watch --no-source-map main.scss styles.css"
+    "compile": "sass --watch --no-source-map main.scss styles.css",
+    "build:compile": "sass --no-source-map main.scss build/compiled.css",
+    "build:prefixes": "postcss build/compiled.css --use autoprefixer --output build/prefixed.css",
+    "build:optimize": "csso build/prefixed.css --output styles.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "csso-cli": "^4.0.2",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
     "sass": "^1.80.3"
   }
 }
